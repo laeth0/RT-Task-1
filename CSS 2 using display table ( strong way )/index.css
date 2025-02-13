@@ -1,0 +1,19 @@
+﻿.proj_container {
+    height: 300px;
+    border: 1px solid green;
+    padding: 5px;
+    display: table;
+}
+
+.proj_sub_container {
+    display: table-cell;
+    vertical-align: middle;
+    height: 90%;
+    width: 80%;
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.proj_content {
+    background-color: #ccc;
+}
