@@ -1,0 +1,191 @@
+﻿/* Set up the background to match the image's approximate color */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7c86f; /* A soft orange/yellow background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer-border{
+    aspect-ratio: 1/1;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3da7f2;
+    border-radius: 50%;
+}
+
+.middle-border{
+    height: 85%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the entire clock */
+.clock {
+    position: relative;
+    aspect-ratio: 1/1;
+    height: 95%;
+    border-radius: 50%;
+    background: #fff; /* Clock face */
+}
+
+.stick{
+    z-index: -1;
+    position: absolute;
+    width: 9%;
+    height: 20%;
+    background: #FFF;
+    top: -16%;
+    transform-origin: center center;
+}
+
+.stick-left{
+    left: 15%;
+    transform: rotate(-20deg);
+}
+
+.stick-right{
+    right: 15%;
+    transform: rotate(20deg);
+}
+
+/* Alarm bells at the top */
+.bell {
+    z-index: 1;
+    position: absolute;
+    width: 30%;
+    height: 12%;
+    background: #3da7f2;
+    border-radius: 50% 50% 0 0; /* Top half-circle */
+    top: -25%;
+}
+
+.bell-left {
+    left: 0;
+    transform: rotate(-20deg);
+}
+
+.bell-right {
+    right: 0;
+    transform: rotate(20deg);
+}
+
+/* Clock feet at the bottom */
+.foot {
+    z-index: -1;
+    position: absolute;
+    width: 7%;
+    height: 22%;
+    background: #fff;
+    bottom: -20%;
+    border-radius: 42%;
+}
+
+.foot-left {
+    left: 13%;
+    transform: rotate(35deg);
+}
+
+.foot-right {
+    right: 14%;
+    transform: rotate(-35deg);
+}
+
+/* The four orange dots inside (12, 3, 6, 9 o'clock markers) */
+.dot {
+    position: absolute;
+    width: 8%;
+    aspect-ratio: 1/1;
+    background: #f59e00;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 #595454;;
+    
+}
+
+.dot12 {
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot3 {
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot6 {
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot9 {
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Clock hands (hour, minute, second) */
+.hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    background: #f59e00;
+}
+
+.hour {
+    width: 3%;
+    height: 28%;
+    border-radius: 3px;
+    /* Example angle: 30deg; adjust as desired */
+    transform: translate(-50%,-100%) rotate(130deg);
+}
+
+.minute {
+    width: 2%;
+    height: 30%;
+    border-radius: 2px;
+    /* Example angle: 60deg */
+    transform: translate(-50%,-97%) rotate(-40deg);
+}
+
+.second {
+    width: 1%;
+    height: 32%;
+    border-radius: 1px;
+    /* Example angle: 120deg */
+    transform: translate(-50%,-100%) rotate(215deg);
+}
+
+/* Center pivot circle */
+.center {
+    z-index: 2;
+    border: 3px solid #f59e00;
+    position: absolute;
+    width: 13%;
+    height: 13%;
+    background: white;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
