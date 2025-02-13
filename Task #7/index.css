@@ -1,0 +1,85 @@
+﻿/* Center everything on the page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* Container for the face */
+.face {
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: #3498db; /* Blue color for the face */
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 2.5s infinite;
+}
+
+.eyes {
+    width: 50%;
+    position: absolute;
+    top: 25%; /* Adjust for eye vertical placement */
+    left: 10%;
+    display: flex;
+    gap: 10%; /* Space between the two eyes */
+    animation: bounce .6s  infinite ;
+
+}
+
+.eye {
+    width: 42%;
+    aspect-ratio: 1/1;
+    background: #fff; /* White eyes */
+    border-radius: 50%;
+    position: relative;
+}
+
+.pupil {
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 1/1;
+    top: 13%;
+    background: #000; /* Black pupil */
+    border-radius: 50%;
+}
+
+.pupil-left {
+    right: 9%;
+}
+
+.pupil-right {
+    left: 9%;
+}
+
+
+/* Simple mouth at the bottom */
+.mouth {
+    position: absolute;
+    bottom: 42%;
+    left: 24%;
+    width: 20%;
+    aspect-ratio: 2/1;
+    background: #000; /* Black mouth */
+    border-radius: 0 0 100% 100%; /* Slight curved bottom */
+    animation: bounce .6s  infinite;
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(20%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20%);
+    }
+}
