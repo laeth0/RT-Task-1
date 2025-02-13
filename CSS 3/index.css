@@ -1,12 +1,14 @@
 ﻿.proj_container {
+    display: flex;
+    justify-content: center;
     height: 300px;
     border: 1px solid green;
     padding: 5px;
 }
 
 .proj_sub_container {
-    margin: auto;
-    position: relative;
+    display: flex;
+    align-items: center;
     height: 90%;
     width: 80%;
     border: 1px solid red;
@@ -14,7 +16,6 @@
 }
 
 .proj_content {
-    position: absolute;
-    top: 50%;
+    width: 100%;
     background-color: #ccc;
 }
